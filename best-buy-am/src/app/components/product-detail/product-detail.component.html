@@ -1,0 +1,20 @@
+<div class="container-lg px-4" style="margin-top:100px;">
+    <div class="row" *ngIf="amProduct">
+      <div class="col-md-12 box-shadow">
+        <div class="p-3 card border bg-light">
+          <div class="card-header text-center">
+            <img class="img-fluid mb-4" [src]="amProduct?.amPhoto" alt="{{amProduct?.amName}}">
+            <h4 class="my-0 font-weight-normal">{{amProduct?.amName}}</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>{{amProduct?.amDescription}}</li>
+              <li>
+                <h1 class="card-title pricing-card-title">${{amProduct?.amPrice}}</h1>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

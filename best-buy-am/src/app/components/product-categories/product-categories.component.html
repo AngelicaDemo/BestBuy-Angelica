@@ -1,0 +1,20 @@
+<div class="container-lg px-4" style="margin-top:100px;">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{{amCategory}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 box-shadow" *ngFor="let product of amProducts">
+        <div class="p-3 card border bg-light">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">{{product.amName}}</h4>
+          </div>
+          <div class="card-body">
+            <img class="img-fluid mb-4" [src]="product.amPhoto" alt="{{product.amName}}">
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="amViewProduct(product.amId)">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
